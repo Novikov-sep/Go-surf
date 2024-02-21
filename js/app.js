@@ -37,6 +37,13 @@
     function addTouchClass() {
         if (isMobile.any()) document.documentElement.classList.add("touch");
     }
+    function addLoadedClass() {
+        if (!document.documentElement.classList.contains("loading")) window.addEventListener("load", (function() {
+            setTimeout((function() {
+                document.documentElement.classList.add("loaded");
+            }), 0);
+        }));
+    }
     function getHash() {
         if (location.hash) return location.hash.replace("#", "");
     }
@@ -3824,6 +3831,7 @@
             spaceBetween: 0,
             speed: 800,
             touchRatio: 0,
+            preloadImages: true,
             lazy: true,
             effect: "fade",
             pagination: {
@@ -4140,6 +4148,7 @@
     window["FLS"] = true;
     isWebp();
     addTouchClass();
+    addLoadedClass();
     menuInit();
     pageNavigation();
     headerScroll();
