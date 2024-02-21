@@ -7,13 +7,32 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="description" content="A website dedicated to all things surfing, providing information on the best surf spots, gear reviews, and tips for beginners and experienced surfers alike.">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240221151730">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240221155540">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+	<style>
+		body {
+			position: relative;
+			overflow: hidden;
+		}
+
+		body::before {
+			content: "";
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 1;
+			visibility: visible;
+			background-color: #4af6cd;
+			z-index: 100;
+		}
+	</style>
 	<div class="wrapper">
 		<header data-scroll="1024" class="header">
 			<div class="header__container">
@@ -208,7 +227,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20240221151730"></script>
+	<script src="js/app.min.js?_v=20240221155540"></script>
 </body>
 
 </html>
