@@ -1188,6 +1188,7 @@ html {
 
   .icon-menu {
     display: block;
+    font-size: 0;
     position: relative;
     width: 30px;
     height: 18px;
