@@ -632,7 +632,7 @@ html {
   z-index: 2;
 }
 
-.swiper-slide__map img {
+.swiper-slide__map source {
   width: 1001px;
   aspect-ratio: 1001/496;
   -o-object-fit: cover;
@@ -660,7 +660,7 @@ html {
   z-index: 1;
 }
 
-.swiper-slide__image img {
+.swiper-slide__image source {
   width: 100%;
   height: 100%;
   aspect-ratio: 45/32;
@@ -963,7 +963,7 @@ html {
     width: 800px;
   }
 
-  .swiper-slide__map img {
+  .swiper-slide__map source {
     width: 800px;
   }
 
