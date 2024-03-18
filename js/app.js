@@ -4711,6 +4711,11 @@
     function sucPosition(position) {
         lat2 = position.coords.latitude;
         lon2 = position.coords.longitude;
+        query = {
+            lat: lat2,
+            lon: lon2,
+            language: "en"
+        };
         console.log("position", position);
         console.log(lat2, lon2, query);
         getGeo();
@@ -4720,7 +4725,8 @@
     var token = "40627f6477bdc46768311cef48022f2457ff5b91";
     var query = {
         lat: lat2,
-        lon: lon2
+        lon: lon2,
+        language: "en"
     };
     var options = {
         method: "POST",
