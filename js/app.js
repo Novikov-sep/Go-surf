@@ -4742,6 +4742,7 @@
         const response = await fetch(url, options);
         const result = await response.json();
         console.log(result);
+        console.log(options.body);
         result = result?.suggestions[0]?.data?.city;
         geoLocation.innerHTML = `${result}`;
         geoLocationSurf.innerHTML = `${result}`;
