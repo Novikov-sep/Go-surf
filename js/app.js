@@ -4730,7 +4730,9 @@
             Accept: "application/json",
             Authorization: "Token " + token
         },
-        body: JSON.stringify(query)
+        body: JSON.stringify({
+            query
+        })
     };
     async function getGeo() {
         const response = await fetch(url, options);
