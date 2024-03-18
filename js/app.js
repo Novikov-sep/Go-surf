@@ -4720,8 +4720,7 @@
     var token = "40627f6477bdc46768311cef48022f2457ff5b91";
     var query = {
         lat: lat2,
-        lon: lon2,
-        language: "en"
+        lon: lon2
     };
     var options = {
         method: "POST",
@@ -4736,8 +4735,8 @@
     async function getGeo() {
         const response = await fetch(url, options);
         const result = await response.json();
-        result = result?.suggestions[0]?.data?.city;
         console.log(result);
+        result = result?.suggestions[0]?.data?.city;
         geoLocation.innerHTML = `${result}`;
         geoLocationSurf.innerHTML = `${result}`;
     }
