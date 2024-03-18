@@ -4706,14 +4706,19 @@
         month: "2-digit"
     });
     dateYear.innerHTML = date.getFullYear();
-    let geo = navigator.geolocation.getCurrentPosition((position => console.log(position))) === void 0 ? "geo error" : navigator.geolocation.getCurrentPosition((position => console.log(position)));
+    let lat2 = "geo error";
+    let lon2 = "geo error";
+    let geo = navigator.geolocation.getCurrentPosition((position => console.log(position))) === void 0 ? "geo error" : navigator.geolocation.getCurrentPosition((position => {
+        lat2 = position.coords.latitude;
+        lon2 = position.coords.longitude;
+    }));
     var url = "http://suggestions.dadata.ru/suggestions/api/4_1/rs/geolocate/address";
     var token = "40627f6477bdc46768311cef48022f2457ff5b91";
-    let lat = geo !== "geo error" ? geo.coords.latitude : null;
-    let lon = geo !== "geo error" ? geo.coords.longitude : null;
+    geo !== "geo error" && geo.coords.latitude;
+    geo !== "geo error" && geo.coords.longitude;
     var query = {
-        lat,
-        lon,
+        lat: lat2,
+        lon: lon2,
         language: "en"
     };
     console.log("query", query);
