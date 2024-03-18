@@ -4711,6 +4711,7 @@
     let geo = navigator.geolocation.getCurrentPosition((position => console.log(position))) === void 0 ? "geo error" : navigator.geolocation.getCurrentPosition((position => {
         lat2 = position.coords.latitude;
         lon2 = position.coords.longitude;
+        console.log(position);
     }));
     var url = "http://suggestions.dadata.ru/suggestions/api/4_1/rs/geolocate/address";
     var token = "40627f6477bdc46768311cef48022f2457ff5b91";
