@@ -4720,7 +4720,6 @@
         console.log(lat2, lon2, query);
         getGeo();
     }
-    navigator.geolocation.getCurrentPosition(sucPosition);
     var url = "http://suggestions.dadata.ru/suggestions/api/4_1/rs/geolocate/address";
     var token = "40627f6477bdc46768311cef48022f2457ff5b91";
     let query = {
@@ -4747,6 +4746,7 @@
         geoLocation.innerHTML = `${result}`;
         geoLocationSurf.innerHTML = `${result}`;
     }
+    navigator.geolocation.getCurrentPosition(sucPosition);
     const searchForm = document.querySelector(".header__form");
     const searchButton = document.querySelector(".header__icon");
     const searchInput = document.querySelector(".header__input");
