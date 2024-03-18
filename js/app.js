@@ -4708,7 +4708,7 @@
     dateYear.innerHTML = date.getFullYear();
     let lat2 = "geo error";
     let lon2 = "geo error";
-    function sucPosition() {
+    function sucPosition(position) {
         lat2 = position.coords.latitude;
         lon2 = position.coords.longitude;
         console.log(position);
