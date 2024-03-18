@@ -4712,7 +4712,7 @@
         lat2 = position.coords.latitude;
         lon2 = position.coords.longitude;
         console.log("position", position);
-        console.log(lat2, lon2);
+        console.log(lat2, lon2, query);
         getGeo();
     }
     navigator.geolocation.getCurrentPosition(sucPosition);
@@ -4730,9 +4730,7 @@
             Accept: "application/json",
             Authorization: "Token " + token
         },
-        body: JSON.stringify({
-            query
-        })
+        body: JSON.stringify(query)
     };
     async function getGeo() {
         const response = await fetch(url, options);
