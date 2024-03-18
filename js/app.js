@@ -4711,7 +4711,7 @@
     function sucPosition(position) {
         lat2 = position.coords.latitude;
         lon2 = position.coords.longitude;
-        console.log(position);
+        console.log("position", position);
         getGeo();
     }
     let geo = navigator.geolocation.getCurrentPosition(sucPosition);
