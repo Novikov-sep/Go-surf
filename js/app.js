@@ -4712,6 +4712,7 @@
         lat2 = position.coords.latitude;
         lon2 = position.coords.longitude;
         console.log(position);
+        getGeo();
     }
     let geo = navigator.geolocation.getCurrentPosition(sucPosition);
     var url = "http://suggestions.dadata.ru/suggestions/api/4_1/rs/geolocate/address";
@@ -4744,7 +4745,6 @@
         geoLocation.innerHTML = `${geo}`;
         geoLocationSurf.innerHTML = `${geo}`;
     }
-    getGeo();
     const searchForm = document.querySelector(".header__form");
     const searchButton = document.querySelector(".header__icon");
     const searchInput = document.querySelector(".header__input");
