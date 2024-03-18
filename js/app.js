@@ -4706,18 +4706,30 @@
         month: "2-digit"
     });
     dateYear.innerHTML = date.getFullYear();
+    let url = "http://suggestions.dadata.ru/suggestions/api/4_1/rs/geolocate/address";
+    let token = "40627f6477bdc46768311cef48022f2457ff5b91";
     let lat2 = "geo error";
     let lon2 = "geo error";
     async function sucPosition(position) {
         lat2 = position.coords.latitude;
         lon2 = position.coords.longitude;
-        query = {
+        let query = {
             lat: lat2,
             lon: lon2,
             language: "en"
         };
         console.log("position", position);
         console.log(lat2, lon2, query);
+        let options = {
+            method: "POST",
+            mode: "cors",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+                Authorization: "Token " + token
+            },
+            body: JSON.stringify(query)
+        };
         const response = await fetch(url, options);
         const result = await response.json();
         console.log(result);
@@ -4726,23 +4738,6 @@
         geoLocation.innerHTML = `${result}`;
         geoLocationSurf.innerHTML = `${result}`;
     }
-    let url = "http://suggestions.dadata.ru/suggestions/api/4_1/rs/geolocate/address";
-    let token = "40627f6477bdc46768311cef48022f2457ff5b91";
-    let query = {
-        lat: lat2,
-        lon: lon2,
-        language: "en"
-    };
-    let options = {
-        method: "POST",
-        mode: "cors",
-        headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-            Authorization: "Token " + token
-        },
-        body: JSON.stringify(query)
-    };
     navigator.geolocation.getCurrentPosition(sucPosition);
     const searchForm = document.querySelector(".header__form");
     const searchButton = document.querySelector(".header__icon");
