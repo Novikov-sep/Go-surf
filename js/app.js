@@ -4717,8 +4717,6 @@
     let geo = navigator.geolocation.getCurrentPosition(sucPosition);
     var url = "http://suggestions.dadata.ru/suggestions/api/4_1/rs/geolocate/address";
     var token = "40627f6477bdc46768311cef48022f2457ff5b91";
-    geo !== "geo error" && geo.coords.latitude;
-    geo !== "geo error" && geo.coords.longitude;
     var query = {
         lat: lat2,
         lon: lon2,
