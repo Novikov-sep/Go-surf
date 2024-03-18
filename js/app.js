@@ -4712,6 +4712,7 @@
         lat2 = position.coords.latitude;
         lon2 = position.coords.longitude;
         console.log("position", position);
+        console.log(position.coords, position.coords.latitude);
         getGeo();
     }
     let geo = navigator.geolocation.getCurrentPosition(sucPosition);
