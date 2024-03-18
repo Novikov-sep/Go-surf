@@ -4715,7 +4715,7 @@
         console.log(lat2, lon2);
         getGeo();
     }
-    let geo = navigator.geolocation.getCurrentPosition(sucPosition);
+    navigator.geolocation.getCurrentPosition(sucPosition);
     var url = "http://suggestions.dadata.ru/suggestions/api/4_1/rs/geolocate/address";
     var token = "40627f6477bdc46768311cef48022f2457ff5b91";
     var query = {
@@ -4723,7 +4723,6 @@
         lon: lon2,
         language: "en"
     };
-    console.log("query", query);
     var options = {
         method: "POST",
         mode: "cors",
@@ -4732,17 +4731,15 @@
             Accept: "application/json",
             Authorization: "Token " + token
         },
-        body: JSON.stringify({
-            query
-        })
+        body: JSON.stringify(query)
     };
     async function getGeo() {
         const response = await fetch(url, options);
         const result = await response.json();
-        geo = result?.suggestions[0]?.data?.city;
+        result = result?.suggestions[0]?.data?.city;
         console.log(result);
-        geoLocation.innerHTML = `${geo}`;
-        geoLocationSurf.innerHTML = `${geo}`;
+        geoLocation.innerHTML = `${result}`;
+        geoLocationSurf.innerHTML = `${result}`;
     }
     const searchForm = document.querySelector(".header__form");
     const searchButton = document.querySelector(".header__icon");
