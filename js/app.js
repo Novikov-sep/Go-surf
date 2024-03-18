@@ -4708,7 +4708,7 @@
     dateYear.innerHTML = date.getFullYear();
     let lat2 = "geo error";
     let lon2 = "geo error";
-    function sucPosition(position) {
+    async function sucPosition(position) {
         lat2 = position.coords.latitude;
         lon2 = position.coords.longitude;
         query = {
@@ -4718,6 +4718,13 @@
         };
         console.log("position", position);
         console.log(lat2, lon2, query);
+        const response = await fetch(url, options);
+        const result = await response.json();
+        console.log(result);
+        console.log(options.body);
+        result = result?.suggestions[0]?.data?.city;
+        geoLocation.innerHTML = `${result}`;
+        geoLocationSurf.innerHTML = `${result}`;
     }
     let url = "http://suggestions.dadata.ru/suggestions/api/4_1/rs/geolocate/address";
     let token = "40627f6477bdc46768311cef48022f2457ff5b91";
@@ -4736,17 +4743,7 @@
         },
         body: JSON.stringify(query)
     };
-    async function getGeo() {
-        const response = await fetch(url, options);
-        const result = await response.json();
-        console.log(result);
-        console.log(options.body);
-        result = result?.suggestions[0]?.data?.city;
-        geoLocation.innerHTML = `${result}`;
-        geoLocationSurf.innerHTML = `${result}`;
-    }
     navigator.geolocation.getCurrentPosition(sucPosition);
-    getGeo();
     const searchForm = document.querySelector(".header__form");
     const searchButton = document.querySelector(".header__icon");
     const searchInput = document.querySelector(".header__input");
