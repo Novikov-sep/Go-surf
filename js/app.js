@@ -4720,14 +4720,14 @@
         console.log(lat2, lon2, query);
         getGeo();
     }
-    var url = "http://suggestions.dadata.ru/suggestions/api/4_1/rs/geolocate/address";
-    var token = "40627f6477bdc46768311cef48022f2457ff5b91";
+    let url = "http://suggestions.dadata.ru/suggestions/api/4_1/rs/geolocate/address";
+    let token = "40627f6477bdc46768311cef48022f2457ff5b91";
     let query = {
         lat: lat2,
         lon: lon2,
         language: "en"
     };
-    var options = {
+    let options = {
         method: "POST",
         mode: "cors",
         headers: {
