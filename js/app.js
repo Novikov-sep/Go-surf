@@ -4713,8 +4713,10 @@
     let lon = geo !== "geo error" ? geo.coords.longitude : null;
     var query = {
         lat,
-        lon
+        lon,
+        language: "en"
     };
+    console.log("query", query);
     var options = {
         method: "POST",
         mode: "cors",
@@ -4723,7 +4725,9 @@
             Accept: "application/json",
             Authorization: "Token " + token
         },
-        body: JSON.stringify(query)
+        body: JSON.stringify({
+            query
+        })
     };
     async function getGeo() {
         const response = await fetch(url, options);
