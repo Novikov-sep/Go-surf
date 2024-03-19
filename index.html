@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="description" content="A website dedicated to all things surfing, providing information on the best surf spots, gear reviews, and tips for beginners and experienced surfers alike.">
-	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+	<!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" /> -->
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240318213328">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240319143511">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -535,12 +535,18 @@
 						</div>
 					</div>
 					<div class="surf-swiper-arrows">
-						<svg class="swiper-button swiper-button-prev" width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M8.77789 0.562669L0.564298 8.71345C-0.188099 9.46459 -0.188099 10.6838 0.564298 11.4324L8.77789 19.5881C9.5366 20.3392 10.7646 20.3354 11.5233 19.5881C12.2744 18.8357 12.2744 17.6215 11.5233 16.8691L6.71818 12.1016H22.1324C23.2459 12.1016 24.1467 11.202 24.1467 10.0885C24.1467 8.97625 23.2459 8.07537 22.1324 8.07537H6.68919L11.5233 3.28282C12.2744 2.53168 12.2744 1.31623 11.5233 0.565085C10.7658 -0.187313 9.53783 -0.188569 8.77789 0.562568V0.562669Z" fill="inherit" />
-						</svg>
-						<svg class="swiper-button swiper-button-next" width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M15.8668 19.5872L24.0804 11.4365C24.8328 10.6853 24.8328 9.46609 24.0804 8.71746L15.8668 0.561846C15.1081 -0.189295 13.88 -0.185526 13.1214 0.561846C12.3702 1.31424 12.3702 2.52844 13.1214 3.28084L17.9265 8.04826L2.5123 8.04826C1.39879 8.04826 0.497906 8.94789 0.497906 10.0614C0.497906 11.1736 1.39879 12.0745 2.5123 12.0745L17.9555 12.0745L13.1214 16.8671C12.3702 17.6182 12.3702 18.8337 13.1214 19.5848C13.8788 20.3372 15.1068 20.3385 15.8668 19.5873V19.5872Z" fill="inherit" />
-						</svg>
+						<button>
+							<svg class="swiper-button swiper-button-prev" width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M8.77789 0.562669L0.564298 8.71345C-0.188099 9.46459 -0.188099 10.6838 0.564298 11.4324L8.77789 19.5881C9.5366 20.3392 10.7646 20.3354 11.5233 19.5881C12.2744 18.8357 12.2744 17.6215 11.5233 16.8691L6.71818 12.1016H22.1324C23.2459 12.1016 24.1467 11.202 24.1467 10.0885C24.1467 8.97625 23.2459 8.07537 22.1324 8.07537H6.68919L11.5233 3.28282C12.2744 2.53168 12.2744 1.31623 11.5233 0.565085C10.7658 -0.187313 9.53783 -0.188569 8.77789 0.562568V0.562669Z" fill="inherit" />
+							</svg>
+							<span>prev slide</span>
+						</button>
+						<button>
+							<svg class="swiper-button swiper-button-next" width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15.8668 19.5872L24.0804 11.4365C24.8328 10.6853 24.8328 9.46609 24.0804 8.71746L15.8668 0.561846C15.1081 -0.189295 13.88 -0.185526 13.1214 0.561846C12.3702 1.31424 12.3702 2.52844 13.1214 3.28084L17.9265 8.04826L2.5123 8.04826C1.39879 8.04826 0.497906 8.94789 0.497906 10.0614C0.497906 11.1736 1.39879 12.0745 2.5123 12.0745L17.9555 12.0745L13.1214 16.8671C12.3702 17.6182 12.3702 18.8337 13.1214 19.5848C13.8788 20.3372 15.1068 20.3385 15.8668 19.5873V19.5872Z" fill="inherit" />
+							</svg>
+							<span>next slide</span>
+						</button>
 					</div>
 				</div>
 				<div class="surf__background-icon">
@@ -667,11 +673,13 @@
 							<svg class="swiper-button swiper-button-prev" width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M8.77789 0.562669L0.564298 8.71345C-0.188099 9.46459 -0.188099 10.6838 0.564298 11.4324L8.77789 19.5881C9.5366 20.3392 10.7646 20.3354 11.5233 19.5881C12.2744 18.8357 12.2744 17.6215 11.5233 16.8691L6.71818 12.1016H22.1324C23.2459 12.1016 24.1467 11.202 24.1467 10.0885C24.1467 8.97625 23.2459 8.07537 22.1324 8.07537H6.68919L11.5233 3.28282C12.2744 2.53168 12.2744 1.31623 11.5233 0.565085C10.7658 -0.187313 9.53783 -0.188569 8.77789 0.562568V0.562669Z" fill="inherit" />
 							</svg>
+							<span>prev slide</span>
 						</button>
 						<button type="button">
 							<svg class="swiper-button swiper-button-next" width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M15.8668 19.5872L24.0804 11.4365C24.8328 10.6853 24.8328 9.46609 24.0804 8.71746L15.8668 0.561846C15.1081 -0.189295 13.88 -0.185526 13.1214 0.561846C12.3702 1.31424 12.3702 2.52844 13.1214 3.28084L17.9265 8.04826L2.5123 8.04826C1.39879 8.04826 0.497906 8.94789 0.497906 10.0614C0.497906 11.1736 1.39879 12.0745 2.5123 12.0745L17.9555 12.0745L13.1214 16.8671C12.3702 17.6182 12.3702 18.8337 13.1214 19.5848C13.8788 20.3372 15.1068 20.3385 15.8668 19.5873V19.5872Z" fill="inherit" />
 							</svg>
+							<span>next slide</span>
 						</button>
 					</div>
 				</div>
@@ -692,12 +700,14 @@
 									<svg class="item-sleep__minus item-sleep__svg" width="14" height="4" viewBox="0 0 14 4" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M0.137527 0.376953H13.8633V3.12178H0.137527L0.137527 0.376953Z" fill="inherit" />
 									</svg>
+									<span>minus night</span>
 								</button>
 								<button type="button">
 									<svg class="item-sleep__plus item-sleep__svg" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M0.137527 5.62695H13.8633V8.37178H0.137527L0.137527 5.62695Z" fill="inherit" />
 										<path d="M5.62718 0.137695H8.37201V13.8635H5.62718V0.137695Z" fill="inherit" />
 									</svg>
+									<span>plus night</span>
 								</button>
 							</div>
 						</div>
@@ -711,12 +721,14 @@
 									<svg class="item-sleep__minus item-sleep__svg" width="14" height="4" viewBox="0 0 14 4" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M0.137527 0.376953H13.8633V3.12178H0.137527L0.137527 0.376953Z" fill="inherit" />
 									</svg>
+									<span>minus guest</span>
 								</button>
 								<button type="button">
 									<svg class="item-sleep__plus item-sleep__svg " width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path d="M0.137527 5.62695H13.8633V8.37178H0.137527L0.137527 5.62695Z" fill="inherit" />
 										<path d="M5.62718 0.137695H8.37201V13.8635H5.62718V0.137695Z" fill="inherit" />
 									</svg>
+									<span>plus guest</span>
 								</button>
 							</div>
 						</div>
@@ -940,7 +952,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.js?_v=20240318213328"></script>
+	<script src="js/app.min.js?_v=20240319143511"></script>
 </body>
 
 </html>
