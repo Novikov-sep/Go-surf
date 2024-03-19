@@ -4718,8 +4718,6 @@
             lon: lon2,
             language: "en"
         };
-        console.log("position", position);
-        console.log(lat2, lon2, query);
         let options = {
             method: "POST",
             mode: "cors",
@@ -4732,8 +4730,6 @@
         };
         const response = await fetch(url, options);
         const result = await response.json();
-        console.log(result);
-        console.log(options.body);
         const city = result?.suggestions[0]?.data?.city;
         geoLocation.innerHTML = `${city}`;
         geoLocationSurf.innerHTML = `${city}`;
