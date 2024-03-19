@@ -1424,6 +1424,9 @@ body::after {
 }
 
 .swiper-slide__map img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 1001px;
   aspect-ratio: 1001/496;
   -o-object-fit: cover;
