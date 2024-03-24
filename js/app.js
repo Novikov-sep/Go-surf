@@ -4307,10 +4307,6 @@
             preloadImages: true,
             lazy: true,
             effect: "fade",
-            autoplay: {
-                delay: 3e3,
-                disableOnInteraction: false
-            },
             pagination: {
                 el: ".swiper-pagination",
                 renderBullet: function(index, className, text = [ "North Shore", "South Shore", "West Shore", "East Shore" ]) {
